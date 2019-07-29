@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="PDFInvoice.Screen.PDFManager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:PDFInvoice.Screen"
+             mc:Ignorable="d"
+              Height="437" Width="780" AllowDrop="True">
+    <Grid x:Name="PDFManagerGrid">
+        <DockPanel>
+            <Button x:Name="btnInput" Height="25" Width="65" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5">导入</Button>
+            <ProgressBar x:Name="processBar" Width="670" Height="23" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,6,5,0"></ProgressBar>
+        </DockPanel>
+        <ScrollViewer x:Name="scrolls" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="400" Width="{Binding Path=PDFManagerGrid}" Margin="0,34,0,3" MouseMove="Scrolls_MouseMove">
+            <ScrollViewer.Content>
+                <StackPanel x:Name="numberedItemsStackPanel" Orientation="Horizontal"   ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <Grid x:Name="gridControl" Width="{Binding Path=PDFManagerGrid}" Height="auto" />
+                    <!--<Line x:Name="lineMark" X1="0" X2="780" Y1="0" Y2="0" Stroke="AliceBlue" StrokeThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" />-->
+                </StackPanel>
+            </ScrollViewer.Content>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
