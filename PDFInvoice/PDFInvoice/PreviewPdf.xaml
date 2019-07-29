@@ -1,0 +1,16 @@
+﻿<Window x:Class="PDFInvoice.PreviewPdf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PDFInvoice"
+        xmlns:moonpdflib="clr-namespace:MoonPdfLib;assembly=MoonPdfLib"
+        mc:Ignorable="d"
+        Title="PreviewPdf" Height="450" Width="800">
+    <Grid>
+        <moonpdflib:MoonPdfPanel x:Name="moonPdfPanel" Background="LightGray" ViewType="SinglePage" PageRowDisplay="ContinuousPageRows" PageMargin="0,2,4,2" AllowDrop="True">
+        </moonpdflib:MoonPdfPanel>
+        <Button x:Name="btnZoomOut" Width="20" Height="20" Margin="728,62,34,327" Click="BtnZoomOut_Click" Content="-" Background="Transparent" RenderTransformOrigin="0.65,-1.625"></Button>
+        <Button x:Name="btnZoomIn" Width="20" Height="20" Margin="728,12,34,377" Click="BtnZoomIn_Click" Content="+" Background="Transparent"></Button>
+    </Grid>
+</Window>
